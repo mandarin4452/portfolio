@@ -1,0 +1,247 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin : 0;
+    padding : 0;
+    -webkit-font-smoothing: antialiased;
+    color: #333332;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+}
+a:link,
+a:visited,
+a:hover { text-decoration: none;}
+
+
+.wrapper {
+    height: 100%;
+}
+
+.left {
+    background-color: #161625;
+    border-right: 1px solid black;
+    float: right;
+    height: 100%;
+    margin-left: -1px;
+    min-width: 256px;
+    position: fixed;
+    width: 30%;
+    color : #818CAB;
+}
+
+
+.list-titles {
+    margin-top: 15px;
+    float: left;
+    text-align: left;
+    font-weight: 600;
+    width: 30%;
+    color: #818CAB;
+}
+
+.list-content {
+    margin-top: 15px;
+    float: left;
+    width: 70%;
+    text-align: left;
+    font-weight: 300;
+    color : #818CAB;
+}
+
+.list-content a {
+    color : #818CAB;
+}
+
+.right {
+    background-color: white;
+    float: right;
+    height: 100%;
+    position: relative;
+    width: 69%;
+}
+
+.name-hero {
+    background: rgba(0, 0, 0, .001);
+    bottom: 0;
+    height: 290px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 85%;
+}
+
+.me-img {
+    background: url("./resume_pic.PNG") no-repeat center center;
+    background-size: 100%;
+    background-position: 0px;
+    border-radius: 20px;
+    height: 160px;
+    margin: 0 auto;
+    position: relative;
+    width: 160px;
+}
+
+.name-hero h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.name-hero p {
+    color: rgba(0, 0, 0, .5);
+    font-size: .75em;
+    line-height: 1.5;
+    margin: 0 8px 0 0;
+    text-align: center;
+}
+
+.name-hero .name-text {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.inner {
+    margin: 0 auto;
+    max-width: 975px;
+    padding: 3em;
+}
+
+.inner h1 {
+    font-size: 1.75em;
+}
+
+.inner p {
+    color: rgba(0, 0, 0, .3);
+}
+
+.inner p em {
+    color: rgba(0, 0, 0, .75);
+    font-style: normal;
+}
+
+.inner section {
+    margin: 100px auto;
+    line-height: 2.3rem;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: -10px;
+    padding: 0;
+}
+
+.projects li {
+    margin-left: 10%;
+    margin-top: 7%;
+}
+
+.link {
+    margin-left: 10px;
+    line-height: 1.1;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .0125em;
+    color: #fff;
+}
+
+
+.link a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    z-index: 1;
+}
+
+.link a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: .07em;
+    height: .1em;
+    width: 100%;
+    background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
+    z-index: -1;
+    transition: height .25s cubic-bezier(.8,0,.4,1);
+}
+
+.link a:hover::after {
+    height: .3em;
+}
+
+.img_desktop img {
+    width : 100%;
+}
+
+.img_mobile {
+    display : grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-flow: row;
+}
+
+.img_mobile img {
+    width : 80%;    
+}
+
+.project_img {
+    border-radius: 1rem;
+    display : block;
+}
+
+
+
+
+.skill-set li {
+    background: #474646;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: white;
+    display: inline-block;
+    list-style: none;
+    margin: 15px 15px 10px 10px;
+    padding: 5px;
+    text-align: justify;
+    transition: all 0.5s ease-in-out;
+}
+
+.skill-set li:hover {
+    background: white;
+    color : #474646;
+    border : 1px solid #d2d2d3;
+}
+
+
+/* Responsive Nav */
+
+@media screen and (max-width: 48em) {
+    .right,
+    .left {
+        float: none;
+        position: relative !important;
+        width: 100%;
+        min-height: 500px;
+        font-size: 1.2rem;
+    }
+    
+
+}
+@media screen and (max-width: 75em) {
+	body {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 60em) {
+	body {
+		font-size: 14px;
+	}
+}
